@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Magic_8_Ball</title>
+<script type="text/javascript" src="processing.min.js"></script>
+<style>
+body {
+  background-image: url('rusty_backround.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+.button {
+  width: 250px;
+  background-color: #918f89;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+}
+</style>
+</head>
+<body>
+<button class="button" onclick="location.href = 'index.html';">Home</button>
+
+<script type="text/processing">
+int tWidth = 800;
+int tHeight = 600;
+var answer;
+ mouseClicked = function() {
+answer = floor(random(1, 6));
+};
+void setup(){
+
+colorMode(RGB);
+size(tWidth,tHeight);
+background(0);
+smooth();
+background(255, 255, 255);
+
+
+
+
+
+
+
+}
+
+
+
+
+void draw(){
+// \/ START OF CODE \/ \\
+fill(0, 0, 0);
+ellipse(200, 200, 375, 375);
+fill(60, 0, 255);
+triangle(200, 104, 280, 280, 120, 280);
+fill(255, 255, 255);
+
+ mouseClicked = function() {
+answer = floor(random(1, 6));
+};
+
+
+
+if (answer === 1) {
+    text("Most", 186, 200);
+    text("likely", 185, 239);
+}
+if (answer === 2){
+    text("As i see it,", 173, 200);
+    text("yes", 185, 239);
+}
+if (answer === 3){
+    text("Don't count on it", 158, 230);
+
+}
+if (answer === 4){
+    text("You may rely on it", 152, 230);
+
+}
+if (answer === 5){
+    text("Beans", 152, 230);
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+ 
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>

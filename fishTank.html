@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>FishTank</title>
+<script type="text/javascript" src="processing.min.js"></script>
+<style>
+body {
+  background-image: url('rusty_backround.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+.button {
+  width: 250px;
+  background-color: #918f89;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+}
+</style>
+</head>
+<body>
+
+
+<button class="button" onclick="location.href = 'index.html';">Home</button>
+
+<script type="text/processing">
+int tWidth = 2000;
+int tHeight = 925;
+void setup(){
+
+colorMode(RGB);
+size(tWidth,tHeight);
+background(0);
+smooth();
+background(89, 216, 255);
+}
+
+function fish(centerX,centerY,bodyColor,bodyLength){
+
+
+
+
+
+
+var bodyHeight = 74;
+
+
+noStroke();
+fill(bodyColor);
+// body
+ellipse(centerX, centerY, bodyLength, bodyHeight);
+// tail
+var tailWidth = bodyLength/4;
+var tailHeight = bodyHeight/2;
+triangle(centerX-bodyLength/2, centerY,
+         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
+         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+// eye
+fill(33, 33, 33);
+ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
+}
+
+function SeaWeed(x1,y1,cx1,cy1,cx2,cy2,x2,y2,SeaColor){
+fill(SeaColor);
+bezier(x1,y1,cx1,cy1,cx2,cy2,x2,y2);
+}
+function pebble(x,y,w,h,rockColor){
+
+fill(rockColor);
+ellipse(x,y,w,h);
+}
+
+
+mouseClicked = function() {
+    fish(mouseX, mouseY, color(random(0,244), random(0,244), random(0,244)),random(-200, 200));
+};
+
+
+function rockDupe(x,y){
+
+// + y
+pebble(439+ x,380 + y,155,62,color(199, 189, 189));
+pebble(203 + x,397 + y,155,36,color(199, 189, 189));
+pebble(254 + x,380 + y,155,62,color(199, 189, 189));
+
+fish(232 + x,269 + y,color(156, 224, 197),135);
+SeaWeed(401 + x, 432 + y, 267 + x, 209 + y, 335 + x, 164 + y, 276 + x, 408 + y,color(178, 178, 189));
+SeaWeed(136 + x, 403 + y, 296 + x, 233 + y, 243 + x, 294 + y, 25 + x, 406 + y,color(178, 178, 189));
+SeaWeed(120 + x, 465 + y, 226 + x, 268 + y, 9 + x, 121 + y, 48 + x, 348 + y,color(66, 173, 87));
+SeaWeed(157 + x, 416 + y, 288 + x, 258 + y, 211 + x, 137 + y, 102 + x, 403 + y,color(66, 173, 87));
+SeaWeed(390 + x, 408 + y, 210 + x, 130 + y, 472 + x, 73 + y, 298 + x, 409 + y,color(66, 173, 87));
+
+
+}
+
+void draw(){
+// \/ START OF CODE \/ \\
+
+
+
+
+
+
+
+mouseClicked = function() {
+    fish(mouseX, mouseY, color(random(0,244), random(0,244), random(0,244)),random(-200, 200));
+};
+fish(242,59,color(0, 153, 255),-147);
+fish(175,110,color(0, 183, 255),-126);
+rockDupe(0,530);
+rockDupe(400,530);
+rockDupe(800,530);
+rockDupe(1200,530);
+rockDupe(1600,530);
+rockDupe(2000,530);
+rockDupe(2400,530);
+rockDupe(2800,530);
+
+
+
+
+}
+
+
+ 
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>

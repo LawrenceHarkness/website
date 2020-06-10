@@ -17,7 +17,7 @@ jobs:
       uses: bacongobbler/azure-blob-storage-upload@v1.1.0
       with:
         # The connection string for the storage account
-        connection_string:DefaultEndpointsProtocol=https;AccountName=lawrenceharkness;AccountKey=oGWru/yLTu2ECQsr8GiqzzQWPgsXHoxuNHDbk6YVNaawZBM+t2E3mXGQVWAnIfkUA8k70FKwrj2RNFKiJNN6fA==;BlobEndpoint=https://lawrenceharkness.blob.core.windows.net/;QueueEndpoint=https://lawrenceharkness.queue.core.windows.net/;TableEndpoint=https://lawrenceharkness.table.core.windows.net/;FileEndpoint=https://lawrenceharkness.file.core.windows.net/; 
+        connection_string: DefaultEndpointsProtocol=https;AccountName=lawrenceharkness;AccountKey=oGWru/yLTu2ECQsr8GiqzzQWPgsXHoxuNHDbk6YVNaawZBM+t2E3mXGQVWAnIfkUA8k70FKwrj2RNFKiJNN6fA==;BlobEndpoint=https://lawrenceharkness.blob.core.windows.net/;QueueEndpoint=https://lawrenceharkness.queue.core.windows.net/;TableEndpoint=https://lawrenceharkness.table.core.windows.net/;FileEndpoint=https://lawrenceharkness.file.core.windows.net/; 
         # The name of the storage account container these assets will be uploaded to
         container_name: $web
         # The name of the directory you want to upload

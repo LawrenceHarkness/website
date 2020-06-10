@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Processing Demo</title>
+<script type="text/javascript" src="processing.min.js"></script>
+<style>
+    body {
+  background-image: url('rusty_backround.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+.button {
+  width: 250px;
+  background-color: #918f89;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+}
+
+</style>
+</head>
+
+
+
+<body>
+<button class="button" onclick="location.href = 'index.html';">Home</button>
+<script type="text/processing">
+int tWidth = 2000;
+int tHeight = 925;
+void setup(){
+
+colorMode(RGB);
+size(tWidth,tHeight);
+background(0);
+smooth();
+background(255, 255, 255);
+
+
+
+
+
+
+
+}
+
+
+
+
+void draw(){
+// \/ START OF CODE \/ \\
+mouseDragged = function() {
+
+
+
+
+        fill(9, 79, 13);
+        ellipse(mouseX, mouseY, 20, 20);
+
+
+
+};
+
+
+
+}
+
+
+ 
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>

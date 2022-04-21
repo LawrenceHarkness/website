@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lawrence's Games</title>
+<style>
+body {
+  background-image: url('mathBackround.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.nobutton {
+
+    background: transparent;
+    border: none !important;
+    visibility: hidden;
+    font-size:16px;
+    padding: 15px 25px;
+}
+
+.button {
+  width: 250px;
+  background-color: #918f89;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+}
+</style>
+</head>
+
+
+
+
+
+<body>
+<button class="button" onclick="location.href = 'mathsHomepage.html';">Home</button>
+
+
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <center><input type="number" id="b" name="b" value="0" /> +
+  <input type="number" id="a" name="a" value="0" /> =
+  <output name="result" for="a b">0</output>
+</form>
+
+</div>
+
+</div>
+
+<form oninput="result.value=parseInt(b1.value)-parseInt(a1.value)">
+  <center><input type="number" id="b1" name="b1" value="0" /> -
+  <input type="number" id="a1" name="a1" value="0" /> =
+  <output name="result" for="a1 b1">0</output>
+</form>
+</div>
+
+</div>
+<form oninput="result.value=parseInt(b2.value)*parseInt(a2.value)">
+  <center><input type="number" id="b2" name="b2" value="0" /> x
+  <input type="number" id="a2" name="a2" value="0" /> =
+  <output name="result" for="a2 b2">0</output>
+</form>
+</div>
+
+</div>
+<form oninput="result.value=parseInt(b3.value)/parseInt(a3.value)">
+  <center><input type="number" id="b3" name="b3" value="0" /> ÷
+  <input type="number" id="a3" name="a3" value="0" /> =
+  <output name="result" for="a3 b3">0</output>
+</form>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
